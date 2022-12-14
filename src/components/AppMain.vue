@@ -18,7 +18,7 @@ export default {
         <section id="Container_white" class="py-3">
             <h2>Found 62 charcaters</h2>
 
-            <div id="container_card" class="d-flex">
+            <div id="container_card" class="d-flex flex-wrap justify-content-between">
                 <AppCard />
             </div>
         </section>
