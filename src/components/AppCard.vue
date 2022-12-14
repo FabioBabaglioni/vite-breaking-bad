@@ -29,7 +29,7 @@ export default {
     height: 300px;
 
     img {
-        width: 150px;
+        width: 80%;
 
     }
 

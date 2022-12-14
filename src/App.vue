@@ -1,7 +1,9 @@
 <script>
+import axios from 'axios';
 import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
-import { store } from `./store`
+import { store } from './store';
+
 
 
 export default {
@@ -12,6 +14,21 @@ export default {
     return {
       store,
     }
+  },
+  methods: {
+    getCharacters() {
+      axios
+        .get(store.apiUrl)
+        .then(res => {
+          store.characterList = res.data.results
+        })
+        .catch(err => {
+          console.log("Errori, err")
+        })
+    }
+  },
+  mounted() {
+    getCharacters()
   }
 }
 
