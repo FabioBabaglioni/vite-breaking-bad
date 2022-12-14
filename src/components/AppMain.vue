@@ -1,17 +1,60 @@
 <script>
+import AppCard from './AppCard.vue';
 
 export default {
+    components: {
+        AppCard,
+    }
 
 }
+
 </script>
 
 <template>
-    <section class="">
+    <main class="container_app pt-5">
+        <section class="">
+            <button id="white_btn" class="mb-3">Select category</button>
+        </section>
+        <section id="Container_white" class="py-3">
+            <h2>Found 62 charcaters</h2>
 
-    </section>
+            <div id="container_card" class="d-flex">
+                <AppCard />
+            </div>
+        </section>
+
+    </main>
+
 
 </template>
 
 <style scoped lang="scss">
 @use "./style/partials/variables.scss" as *;
+
+#white_btn {
+    background-color: $brandSecondary;
+    color: $brandNormalText;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+#Container_white {
+    background-color: $brandSecondary;
+
+    min-height: 300px;
+
+    h2 {
+        background-color: #212529;
+        width: 90%;
+        margin: 0 auto;
+        color: $brandSecondary;
+        font-size: 15px;
+        padding: 10px;
+    }
+
+    #container_card {
+        width: 85%;
+        margin: 0 auto;
+    }
+}
 </style>
