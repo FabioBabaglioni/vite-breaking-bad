@@ -11,10 +11,10 @@ export default {
 
     <div class="card mt-2 mb-3">
         <div class="d-flex flex-column align-items-center">
-            <img class="pt-3" src="https://rickandmortyapi.com/api/character/avatar/1.jpeg" alt="">
-            <h4 class="pt-2">NAME</h4>
-            <h6>Series</h6>
-            <span>Vivo</span>
+            <img class="pt-3" :src="info.image" alt="">
+            <h4 class="pt-2">{{ info.name }}</h4>
+            <h6>{{ info.status }}</h6>
+            <span>{{ info.species }}</span>
         </div>
     </div>
 
@@ -35,7 +35,8 @@ export default {
 
     h4 {
         color: $brandSecondary;
-        font-size: 18px;
+        font-size: 17px;
+        text-align: center;
     }
 
     h6 {
