@@ -25,7 +25,7 @@ export default {
             <h2>Found 62 charcaters</h2>
 
             <div id="container_card" class="d-flex flex-wrap justify-content-between">
-                <AppCard v-for="character in store.characterList" :key="character.id" />
+                <AppCard v-for="character in store.characterList" :key="character.id" :info="character" />
             </div>
         </section>
 
