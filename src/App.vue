@@ -20,7 +20,7 @@ export default {
       axios
         .get(store.apiUrl)
         .then(res => {
-          store.characterList = res.data.results
+          store.characterList = res.data.results;
         })
         .catch(err => {
           console.log("Errori, err")
@@ -28,7 +28,7 @@ export default {
     }
   },
   mounted() {
-    getCharacters()
+    this.getCharacters()
   }
 }
 
