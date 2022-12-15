@@ -19,13 +19,15 @@ export default {
 <template>
     <main class="container_app pt-5">
         <section class="">
-            <select id="select" class="mb-3">
+            <select id="select" class="mb-3" @click="$emit(`search`)">
                 <option selected>Select category</option>
                 <option value="1">Alive</option>
                 <option value="1">Dead</option>
                 <option value="1">Unknown</option>
             </select>
+
             <button id="btn_reset">Reset</button>
+
         </section>
         <section id="Container_white" class="py-3">
             <h2>Found {{ store.characterList.length }} charcaters</h2>

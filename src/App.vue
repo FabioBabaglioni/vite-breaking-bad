@@ -17,8 +17,15 @@ export default {
   },
   methods: {
     getCharacters() {
+
+      let myUrl = store.apiUrl;
+
+      if (store.apiSelectText !== "Select category") {
+        myUrl += `?${store.apiStatus}=${store.apiSelectText}`
+      }
+
       axios
-        .get(store.apiUrl)
+        .get(myUrl)
         .then(res => {
           store.characterList = res.data.results;
         })
@@ -36,7 +43,7 @@ export default {
 
 <template>
   <AppHeader />
-  <AppMain />
+  <AppMain @search="getCharacters" />
 
 </template>
 
