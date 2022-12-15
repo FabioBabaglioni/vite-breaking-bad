@@ -25,7 +25,8 @@ export default {
 <template>
     <main class="container_app pt-5">
         <section class="">
-            <select v-model="store.apiSelectText" id="select" class="mb-3" @click="$emit(`search`)">
+            <select aria-label="Default select example" v-model="store.apiSelectText" id="select" class="mb-3"
+                @click="$emit(`search`)">
                 <option selected value="">Select category</option>
                 <option value="alive">Alive</option>
                 <option value="dead">Dead</option>
