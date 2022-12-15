@@ -19,9 +19,13 @@ export default {
 <template>
     <main class="container_app pt-5">
         <section class="">
-            <button id="white_btn" class="mb-3">
-                Select category
-            </button>
+            <select id="select" class="mb-3">
+                <option selected>Select category</option>
+                <option value="1">Alive</option>
+                <option value="1">Dead</option>
+                <option value="1">Unknown</option>
+            </select>
+            <button id="btn_reset">Reset</button>
         </section>
         <section id="Container_white" class="py-3">
             <h2>Found {{ store.characterList.length }} charcaters</h2>
@@ -39,11 +43,20 @@ export default {
 <style scoped lang="scss">
 @use "./style/partials/variables.scss" as *;
 
-#white_btn {
+#select {
     background-color: $brandSecondary;
     color: $brandNormalText;
     padding: 5px;
     border-radius: 10px;
+}
+
+#btn_reset {
+    background-color: orange;
+    border: solid 1px orange;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 10px;
 }
 
 #Container_white {
