@@ -19,10 +19,12 @@ export default {
 <template>
     <main class="container_app pt-5">
         <section class="">
-            <button id="white_btn" class="mb-3">Select category</button>
+            <button id="white_btn" class="mb-3">
+                Select category
+            </button>
         </section>
         <section id="Container_white" class="py-3">
-            <h2>Found 62 charcaters</h2>
+            <h2>Found {{ store.characterList.length }} charcaters</h2>
 
             <div id="container_card" class="d-flex flex-wrap justify-content-between">
                 <AppCard v-for="character in store.characterList" :key="character.id" :info="character" />
