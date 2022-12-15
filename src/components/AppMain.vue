@@ -10,6 +10,12 @@ export default {
         return {
             store,
         }
+    },
+    methods: {
+        resetTracking() {
+            store.apiSelectText = "";
+            this.$emit(`search`)
+        }
     }
 
 }
@@ -26,7 +32,7 @@ export default {
                 <option value="unknown">Unknown</option>
             </select>
 
-            <button id="btn_reset">Reset</button>
+            <button id="btn_reset" @click="resetTracking()">Reset</button>
 
         </section>
         <section id="Container_white" class="py-3">
