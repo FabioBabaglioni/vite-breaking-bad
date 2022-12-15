@@ -19,11 +19,11 @@ export default {
 <template>
     <main class="container_app pt-5">
         <section class="">
-            <select id="select" class="mb-3" @click="$emit(`search`)">
-                <option selected>Select category</option>
-                <option value="1">Alive</option>
-                <option value="1">Dead</option>
-                <option value="1">Unknown</option>
+            <select v-model="store.apiSelectText" id="select" class="mb-3" @click="$emit(`search`)">
+                <option selected value="">Select category</option>
+                <option value="alive">Alive</option>
+                <option value="dead">Dead</option>
+                <option value="unknown">Unknown</option>
             </select>
 
             <button id="btn_reset">Reset</button>

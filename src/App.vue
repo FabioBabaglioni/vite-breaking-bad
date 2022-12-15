@@ -20,7 +20,7 @@ export default {
 
       let myUrl = store.apiUrl;
 
-      if (store.apiSelectText !== "Select category") {
+      if (store.apiSelectText === "alive" || store.apiSelectText === "dead" || store.apiSelectText === "unknown") {
         myUrl += `?${store.apiStatus}=${store.apiSelectText}`
       }
 
